@@ -1,21 +1,16 @@
-/* --- OBSIDIAN & DIGITAL LAVENDER THEME (FINAL) --- */
+html {
+    scroll-behavior: smooth;
+}
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
 
 :root {
-    /* Zemin: Derin Mat Obsidian */
     --bg-main: #0B0E14;
     --bg-secondary: #151921;
-    
-    /* Vurgu: Digital Lavender & Electric Blue */
     --primary: #818CF8;
     --primary-glow: rgba(129, 140, 248, 0.4);
     --accent: #38BDF8;
-    
-    /* Metin */
     --text-main: #F8FAFC;
     --text-muted: #94A3B8;
-    
-    /* Çizgiler */
     --border: rgba(255, 255, 255, 0.06);
 }
 
@@ -33,12 +28,11 @@ body {
     min-height: 100vh;
 }
 
-/* --- NAVİGASYON VE LOGO --- */
 .glass-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 8%; /* Padding biraz dengelendi */
+    padding: 15px 8%;
     position: fixed;
     width: 100%;
     top: 0;
@@ -48,7 +42,6 @@ body {
     border-bottom: 1px solid var(--border);
 }
 
-/* Logo Kapsayıcısı */
 .logo-container {
     display: flex;
     align-items: center;
@@ -56,19 +49,17 @@ body {
     text-decoration: none;
 }
 
-/* SVG Logo Resmi */
 .nav-logo {
     width: 42px;
     height: 42px;
-    filter: drop-shadow(0 0 15px var(--primary-glow)); /* Hafif neon parlama */
+    filter: drop-shadow(0 0 15px var(--primary-glow));
     transition: transform 0.3s;
 }
 
 .logo-container:hover .nav-logo {
-    transform: rotate(10deg); /* Üzerine gelince hafif döner */
+    transform: rotate(10deg);
 }
 
-/* Logo Yanındaki Yazı */
 .logo-text {
     font-size: 1.5rem;
     font-weight: 700;
@@ -91,7 +82,6 @@ body {
     text-shadow: 0 0 10px var(--primary-glow);
 }
 
-/* --- HERO ALANI --- */
 .hero {
     min-height: 90vh;
     display: flex;
@@ -135,7 +125,6 @@ h1 {
     line-height: 1.6;
 }
 
-/* Keşfet Linki */
 .discover-btn {
     color: var(--primary);
     text-decoration: none;
@@ -152,7 +141,6 @@ h1 {
     text-shadow: 0 0 15px var(--primary-glow);
 }
 
-/* --- APP GRID (ÖZELLİK DUVARI) --- */
 .features-section {
     padding: 80px 10%;
     border-top: 1px solid var(--border);
@@ -173,10 +161,8 @@ h1 {
     font-size: 1.1rem;
 }
 
-/* BENTO GRID YAPISI */
 .bento-grid {
     display: grid;
-    /* Kartların boyutunu otomatik ayarla, minimum 150px */
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 24px;
 }
@@ -197,7 +183,6 @@ h1 {
     cursor: default;
 }
 
-/* Hover Efektleri */
 .tool-card:hover {
     transform: translateY(-8px);
     border-color: var(--primary);
@@ -225,7 +210,6 @@ h1 {
     letter-spacing: 0.3px;
 }
 
-/* Footer */
 footer {
     padding: 80px 10%;
     text-align: center;
@@ -234,11 +218,10 @@ footer {
     background: linear-gradient(to top, var(--bg-secondary), transparent);
 }
 
-/* Mobil Düzenlemeler */
 @media (max-width: 768px) {
     h1 { font-size: 3rem; }
     .glass-nav { padding: 15px 5%; }
     .logo-text { font-size: 1.2rem; }
-    .nav-items { display: none; } /* Mobilde menüyü sadeleştirdik */
-    .bento-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; } /* Mobilde 2'li sıra */
+    .nav-items { display: none; }
+    .bento-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
 }
