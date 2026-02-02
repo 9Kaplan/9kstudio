@@ -1,27 +1,29 @@
-/* --- HOLOGRAPHIC DEEP TECH TEMA --- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@500;700&display=swap');
+/* --- OBSIDIAN & DIGITAL LAVENDER THEME (FINAL) --- */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
 
 :root {
-    /* Ana Renkler */
-    --bg-deep: #030014; /* Sonsuz Uzay Siyahı */
-    --glass-surface: rgba(255, 255, 255, 0.03);
-    --glass-border: rgba(255, 255, 255, 0.08);
+    /* Zemin: Derin Mat Obsidian (İstediğin Koyu Gri) */
+    --bg-main: #0B0E14;
+    --bg-secondary: #151921;
     
-    /* Neon Paleti (Yenilikçi Renkler) */
-    --primary-glow: #a855f7; /* Elektrik Moru */
-    --secondary-glow: #06b6d4; /* Neon Camgöbeği */
-    --accent: #f472b6; /* Hot Pink */
+    /* Vurgu: Digital Lavender & Electric Blue */
+    --primary: #818CF8;
+    --primary-glow: rgba(129, 140, 248, 0.4);
+    --accent: #38BDF8;
     
     /* Metin */
-    --text-main: #ffffff;
-    --text-muted: #94a3b8;
+    --text-main: #F8FAFC;
+    --text-muted: #94A3B8;
+    
+    /* Çizgiler */
+    --border: rgba(255, 255, 255, 0.06);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 html {
@@ -29,48 +31,13 @@ html {
 }
 
 body {
-    background-color: var(--bg-deep);
+    background-color: var(--bg-main);
     color: var(--text-main);
     overflow-x: hidden;
     min-height: 100vh;
-    position: relative;
 }
 
-/* --- AMBİYANS IŞIKLARI (SİHİR BURADA) --- */
-body::before {
-    content: '';
-    position: fixed;
-    top: -20%;
-    left: -10%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, var(--primary-glow), transparent 70%);
-    opacity: 0.15;
-    filter: blur(120px);
-    z-index: -1;
-    animation: floatLight 10s infinite alternate;
-}
-
-body::after {
-    content: '';
-    position: fixed;
-    bottom: -10%;
-    right: -10%;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, var(--secondary-glow), transparent 70%);
-    opacity: 0.15;
-    filter: blur(100px);
-    z-index: -1;
-    animation: floatLight 8s infinite alternate-reverse;
-}
-
-@keyframes floatLight {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(30px, 30px); }
-}
-
-/* --- NAVİGASYON (Sadece Yazı) --- */
+/* Navigasyon */
 .glass-nav {
     display: flex;
     justify-content: space-between;
@@ -80,118 +47,102 @@ body::after {
     width: 100%;
     top: 0;
     z-index: 1000;
-    background: rgba(3, 0, 20, 0.6);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--glass-border);
+    background: rgba(11, 14, 20, 0.85);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
 }
 
-/* Sadece Yazı Olan Logo */
-.logo-text {
-    font-family: 'Outfit', sans-serif;
+/* Logo Yazısı (Resim Yok, Sadece Şık Yazı) */
+.logo {
     font-size: 1.6rem;
     font-weight: 700;
-    letter-spacing: -0.5px;
-    background: linear-gradient(to right, #fff, var(--secondary-glow));
+    background: linear-gradient(to right, #fff, var(--primary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-decoration: none;
+    letter-spacing: -0.5px;
 }
 
 .nav-items a {
     text-decoration: none;
     color: var(--text-muted);
-    margin-left: 35px;
-    font-size: 0.9rem;
+    margin-left: 30px;
+    font-size: 0.95rem;
     transition: 0.3s;
     font-weight: 500;
 }
-
-.nav-items a:hover {
-    color: #fff;
-    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+.nav-items a:hover { 
+    color: var(--primary); 
+    text-shadow: 0 0 10px var(--primary-glow);
 }
 
-/* --- HERO BÖLÜMÜ --- */
+/* Hero Alanı */
 .hero {
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 100px 10% 0;
+    padding: 120px 20px 0;
+    /* Hafif Lavanta parlaması */
+    background: radial-gradient(circle at top, rgba(129, 140, 248, 0.12), transparent 60%);
 }
 
 .badge {
-    font-family: 'Outfit', sans-serif;
-    font-size: 0.75rem;
-    color: var(--secondary-glow);
-    background: rgba(6, 182, 212, 0.1);
-    border: 1px solid rgba(6, 182, 212, 0.3);
-    padding: 6px 16px;
+    padding: 8px 18px;
+    background: rgba(129, 140, 248, 0.08);
+    border: 1px solid rgba(129, 140, 248, 0.2);
     border-radius: 30px;
-    margin-bottom: 30px;
-    display: inline-block;
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 25px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    box-shadow: 0 0 20px rgba(6, 182, 212, 0.1);
 }
 
 h1 {
-    font-family: 'Outfit', sans-serif;
-    font-size: 5rem;
-    line-height: 1.05;
+    font-size: 4.5rem;
+    line-height: 1.1;
     margin-bottom: 25px;
-    font-weight: 700;
-    background: linear-gradient(to right, var(--secondary-glow), var(--primary-glow), var(--accent));
+    /* Premium Gradyan Başlık */
+    background: linear-gradient(180deg, #fff 20%, #94A3B8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-size: 200% auto;
-    animation: shine 5s linear infinite;
-}
-
-@keyframes shine {
-    to { background-position: 200% center; }
+    font-weight: 800;
+    letter-spacing: -2px;
 }
 
 .subtitle {
     color: var(--text-muted);
-    font-size: 1.2rem;
+    font-size: 1.25rem;
+    max-width: 650px;
+    margin-bottom: 45px;
     line-height: 1.6;
-    margin-bottom: 50px;
-    max-width: 600px;
 }
 
-/* Keşfet Linki */
-.discover-btn {
-    color: var(--secondary-glow);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: 0.3s;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.discover-btn:hover {
-    gap: 12px;
-    text-shadow: 0 0 15px var(--secondary-glow);
-}
-
-/* --- APP GRID (Bento) --- */
+/* --- APP GRID (Bento Yapısı) --- */
 .features-section {
     padding: 80px 10%;
-    border-top: 1px solid var(--glass-border);
+    border-top: 1px solid var(--border);
 }
 
 .section-header {
     text-align: center;
     margin-bottom: 60px;
 }
-.section-header h2 { font-family: 'Outfit'; font-size: 3rem; margin-bottom: 10px; }
-.section-header p { color: var(--text-muted); font-size: 1.1rem; }
+.section-header h2 { 
+    font-size: 2.8rem; 
+    margin-bottom: 15px; 
+    font-weight: 700;
+}
+.section-header p { 
+    color: var(--text-muted); 
+    font-size: 1.1rem;
+}
 
+/* Bento Grid */
 .bento-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
@@ -199,8 +150,8 @@ h1 {
 }
 
 .tool-card {
-    background: var(--glass-surface);
-    border: 1px solid var(--glass-border);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
     border-radius: 20px;
     padding: 30px 15px;
     display: flex;
@@ -208,14 +159,17 @@ h1 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    transition: all 0.4s;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
     position: relative;
+    cursor: default;
 }
 
+/* Kart Hover Efektleri (Lavanta Parlaması) */
 .tool-card:hover {
     transform: translateY(-8px);
-    border-color: var(--primary-glow);
-    box-shadow: 0 15px 35px -10px rgba(168, 85, 247, 0.2);
+    border-color: var(--primary);
+    background: rgba(21, 25, 33, 0.9);
+    box-shadow: 0 15px 35px -10px var(--primary-glow);
 }
 
 .tool-card i {
@@ -226,32 +180,32 @@ h1 {
 }
 
 .tool-card:hover i {
-    color: var(--secondary-glow);
+    color: var(--primary);
     transform: scale(1.15) rotate(-5deg);
-    filter: drop-shadow(0 0 10px var(--secondary-glow));
+    filter: drop-shadow(0 0 10px var(--primary-glow));
 }
 
 .tool-card h4 {
-    font-family: 'Outfit';
     font-size: 1rem;
     font-weight: 600;
     color: var(--text-main);
+    letter-spacing: 0.3px;
 }
 
 /* Footer */
 footer {
     padding: 80px 10%;
     text-align: center;
-    border-top: 1px solid var(--glass-border);
+    border-top: 1px solid var(--border);
     margin-top: 50px;
-    background: radial-gradient(circle at top, rgba(168, 85, 247, 0.05), transparent 70%);
+    background: linear-gradient(to top, var(--bg-secondary), transparent);
     color: var(--text-muted);
 }
 
 /* Mobil */
 @media (max-width: 768px) {
-    .hero { padding-top: 140px; }
-    h1 { font-size: 3.5rem; }
-    .nav-items { display: none; }
-    .bento-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+    h1 { font-size: 3rem; }
+    .glass-nav { padding: 15px 5%; }
+    .nav-items { display: none; } 
+    .bento-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; } 
 }
