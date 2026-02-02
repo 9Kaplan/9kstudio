@@ -3,142 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>9K Studio | Next Gen Apps</title>
-    <meta name="description" content="Android ve Web dünyasında premium araçlar.">
-    
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3799/3799652.png" type="image/png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    
+    <title>9K Studio | Toolkit Pro</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1998/1998610.png" type="image/png">
 </head>
 <body>
 
-    <div class="noise-overlay"></div>
-    <div class="glow-orb orb-1"></div>
-    <div class="glow-orb orb-2"></div>
-
     <nav class="glass-nav">
-        <div class="logo">9K <span class="dot">.</span></div>
+        <div class="logo">9K Studio</div>
         <div class="nav-items">
-            <a href="#projects">Projeler</a>
-            <a href="#stack">Teknoloji</a>
-            <a href="#contact" class="cta-btn">İletişim</a>
+            <a href="#ecosystem">Özellikler</a>
+            <a href="#contact">İletişim</a>
         </div>
     </nav>
 
     <header class="hero">
-        <div class="hero-content">
-            <span class="badge">V1.0 // ANDROID & WEB</span>
-            <h1 class="reveal-text">Fikirleri <br> <span class="gradient-text">Koda Dönüştür</span></h1>
-            <p class="subtitle">Kullanıcı dostu, yüksek performanslı ve estetik mobil araçlar geliştiriyorum. Karmaşa yok, sadece çözüm var.</p>
-            
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="count">2+</span>
-                    <span class="label">Aktif Proje</span>
-                </div>
-                <div class="stat-item">
-                    <span class="count">100%</span>
-                    <span class="label">Native Kod</span>
-                </div>
-            </div>
-        </div>
+        <span class="badge">TOOLKIT PRO v2.0</span>
+        <h1>Dijital İsviçre Çakısı <br> Cebinizde.</h1>
+        <p class="subtitle">Tek bir uygulama, 30+ profesyonel araç. Günlük hayattaki tüm dijital ihtiyaçlarınız için geliştirildi. Karmaşadan uzak, performansa odaklı.</p>
         
-        <div class="hero-visual">
-            <div class="phone-mockup floating">
-                <div class="screen-content">
-                    <i class="fa-brands fa-android android-logo"></i>
-                    <div class="code-lines">
-                        <span></span><span></span><span></span>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <a href="#ecosystem" style="color: #818CF8; text-decoration: none; font-weight: 600;">
+            Özellikleri Keşfet <i class="fa-solid fa-arrow-down"></i>
+        </a>
     </header>
 
-    <section id="projects" class="showcase">
+    <section id="ecosystem" class="features-section">
         <div class="section-header">
-            <h2>Geliştirilen <span class="highlight">Araçlar</span></h2>
-            <p>Günlük problemleri çözen akıllı asistanlar.</p>
+            <h2>Geliştirdiğimiz Araçlar</h2>
+            <p>Toolkit Pro uygulamasının içindeki güç merkezi.</p>
         </div>
 
-        <div class="project-grid">
-            <div class="project-card" data-tilt>
-                <div class="card-image">
-                    <i class="fa-solid fa-wave-square"></i>
-                    <div class="overlay"></div>
-                </div>
-                <div class="card-content">
-                    <div class="tags">
-                        <span class="tag">Kotlin</span>
-                        <span class="tag">Audio API</span>
-                    </div>
-                    <h3>SoundWave Pro</h3>
-                    <p>Hassas desibel ölçümü ve ortam gürültü analizi. Gerçek zamanlı grafik desteği.</p>
-                    <a href="#" class="project-link">İncele <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
+        <div id="tool-grid" class="bento-grid">
             </div>
-
-            <div class="project-card" data-tilt>
-                <div class="card-image clean-bg">
-                    <i class="fa-solid fa-broom"></i>
-                    <div class="overlay"></div>
-                </div>
-                <div class="card-content">
-                    <div class="tags">
-                        <span class="tag">Java</span>
-                        <span class="tag">File System</span>
-                    </div>
-                    <h3>DeepClean Master</h3>
-                    <p>Telefon hafızasını tıkayan gereksiz dosyaları bulan ve güvenle temizleyen akıllı algoritma.</p>
-                    <a href="#" class="project-link">İncele <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <div class="project-card coming-soon">
-                <div class="card-content centered">
-                    <i class="fa-solid fa-lock"></i>
-                    <h3>Çok Yakında</h3>
-                    <p>Yeni bir fikir kodlanıyor...</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="stack" class="tech-stack">
-        <div class="scrolling-wrapper">
-            <div class="tech-item"><i class="fa-brands fa-android"></i> Android Studio</div>
-            <div class="tech-item"><i class="fa-brands fa-java"></i> Java</div>
-            <div class="tech-item"><i class="fa-brands fa-kotlin"></i> Kotlin</div>
-            <div class="tech-item"><i class="fa-brands fa-github"></i> GitHub</div>
-            <div class="tech-item"><i class="fa-solid fa-fire"></i> Firebase</div>
-            <div class="tech-item"><i class="fa-solid fa-mobile-screen"></i> UI/UX</div>
-            <div class="tech-item"><i class="fa-brands fa-android"></i> Android Studio</div>
-            <div class="tech-item"><i class="fa-brands fa-java"></i> Java</div>
-            <div class="tech-item"><i class="fa-brands fa-kotlin"></i> Kotlin</div>
-        </div>
     </section>
 
     <footer id="contact">
-        <div class="footer-content">
-            <h2>Birlikte Çalışalım</h2>
-            <p>Bir uygulama fikriniz mi var? Hayata geçirelim.</p>
-            <a href="mailto:iletisim@9kstudio.com" class="email-btn">iletisim@9kstudio.com</a>
-            
-            <div class="footer-bottom">
-                <span>&copy; 2026 9K Studio.</span>
-                <div class="social-links">
-                    <a href="#"><i class="fa-brands fa-github"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
+        <p>Birlikte Çalışalım</p>
+        <h3 style="color: #fff; font-size: 1.5rem; margin: 10px 0;">iletisim@9kstudio.com</h3>
+        <p style="font-size: 0.8rem; margin-top: 30px;">&copy; 2026 9K Studio. Tüm hakları saklıdır.</p>
     </footer>
 
     <script src="script.js"></script>
