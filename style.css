@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: #0f172a; /* Koyu Lacivert/Siyah */
+    background-color: #0a0a0a; /* Çok koyu, sıcak siyah */
     color: #e2e8f0;
     overflow-x: hidden;
 }
@@ -19,24 +19,25 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background: rgba(15, 23, 42, 0.9);
-    backdrop-filter: blur(10px); /* Buzlu cam efekti */
+    background: rgba(10, 10, 10, 0.9); /* Daha koyu arka plan */
+    backdrop-filter: blur(10px);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
     color: #fff;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
+/* Kaplan Turuncusu Vurgu */
 .logo span {
-    color: #38bdf8; /* Açık Mavi */
+    color: #ff6b00; 
 }
 
 .nav-links {
@@ -53,19 +54,19 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #38bdf8;
+    color: #ff6b00; /* Hover rengi turuncu */
 }
 
 .btn-contact {
     padding: 8px 20px;
-    border: 1px solid #38bdf8;
+    border: 1px solid #ff6b00; /* Turuncu kenarlık */
     border-radius: 20px;
-    color: #38bdf8 !important;
+    color: #ff6b00 !important; /* Turuncu yazı */
 }
 
 .btn-contact:hover {
-    background: #38bdf8;
-    color: #0f172a !important;
+    background: #ff6b00; /* Turuncu arka plan */
+    color: #0a0a0a !important; /* Siyah yazı */
 }
 
 /* Hero (Giriş) Alanı */
@@ -75,7 +76,8 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 0 10%;
-    background: radial-gradient(circle at top right, #1e293b, #0f172a);
+    /* Sıcak siyah gradyan */
+    background: radial-gradient(circle at top right, #1c1c1c, #0a0a0a);
 }
 
 .hero-content {
@@ -83,7 +85,7 @@ nav {
 }
 
 .hero-content h4 {
-    color: #38bdf8;
+    color: #ff6b00; /* Turuncu başlık */
     font-weight: 600;
     letter-spacing: 2px;
     margin-bottom: 10px;
@@ -97,7 +99,7 @@ nav {
 
 .hero-content h1 span {
     color: transparent;
-    -webkit-text-stroke: 1px #fff; /* İçi boş yazı efekti */
+    -webkit-text-stroke: 1px #fff;
 }
 
 .hero-content p {
@@ -115,15 +117,16 @@ nav {
     transition: 0.3s;
 }
 
+/* Kaplan Gradyanı Buton */
 .btn-primary {
-    background: linear-gradient(45deg, #0ea5e9, #6366f1);
+    background: linear-gradient(45deg, #ff6b00, #d94e00);
     color: white;
-    box-shadow: 0 10px 20px rgba(14, 165, 233, 0.3);
+    box-shadow: 0 10px 20px rgba(255, 107, 0, 0.3);
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 25px rgba(14, 165, 233, 0.5);
+    box-shadow: 0 15px 25px rgba(255, 107, 0, 0.5);
 }
 
 .btn-secondary {
@@ -133,23 +136,54 @@ nav {
 
 .btn-secondary:hover {
     background: white;
-    color: #0f172a;
+    color: #0a0a0a;
 }
 
-/* İkon Görseli */
 .hero-visual i {
     font-size: 15rem;
-    color: rgba(255,255,255,0.03);
+    color: rgba(255, 107, 0, 0.05); /* Çok hafif turuncu yansıma */
     position: absolute;
     right: 10%;
     top: 50%;
     transform: translateY(-50%) rotate(-20deg);
 }
 
+/* Kayan Kripto Şeridi */
+.crypto-ticker-container {
+    background: #050505; /* Daha koyu */
+    border-top: 1px solid rgba(255, 107, 0, 0.1); /* Turuncu ince çizgi */
+    border-bottom: 1px solid rgba(255, 107, 0, 0.1);
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 15px 0;
+}
+
+.ticker-wrapper {
+    display: inline-block;
+    animation: ticker 15s linear infinite;
+}
+
+.ticker-item {
+    display: inline-block;
+    color: #cbd5e1;
+    font-weight: 600;
+    margin-right: 50px;
+    font-size: 1.1rem;
+}
+
+.ticker-item i { margin-right: 8px; color: #ff6b00; } /* İkonlar turuncu */
+.ticker-item span.up { color: #22c55e; margin-left: 5px; font-size: 0.9rem; }
+.ticker-item span.down { color: #ef4444; margin-left: 5px; font-size: 0.9rem; }
+
+@keyframes ticker {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
 /* Hizmetler (Kartlar) */
 .services {
     padding: 100px 10%;
-    background: #0f172a;
+    background: #0a0a0a;
 }
 
 .section-title {
@@ -174,7 +208,7 @@ nav {
 }
 
 .card {
-    background: rgba(30, 41, 59, 0.5);
+    background: rgba(255,255,255,0.02);
     border: 1px solid rgba(255,255,255,0.05);
     padding: 40px 30px;
     border-radius: 20px;
@@ -187,14 +221,14 @@ nav {
 
 .card:hover {
     transform: translateY(-10px);
-    background: rgba(30, 41, 59, 1);
-    border-color: #38bdf8;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    background: rgba(20, 20, 20, 1);
+    border-color: #ff6b00; /* Hoverda turuncu kenarlık */
+    box-shadow: 0 20px 40px rgba(255, 107, 0, 0.15);
 }
 
 .icon-box {
     font-size: 3rem;
-    color: #38bdf8;
+    color: #ff6b00; /* İkonlar turuncu */
     margin-bottom: 20px;
 }
 
@@ -209,63 +243,11 @@ nav {
     line-height: 1.6;
 }
 
-/* Footer */
-footer {
-    padding: 40px 10%;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #64748b;
-}
-
-.socials a {
-    color: #64748b;
-    margin-left: 15px;
-    font-size: 1.2rem;
-    transition: 0.3s;
-}
-
-.socials a:hover {
-    color: #38bdf8;
-}
-
-/* Kayan Kripto Şeridi */
-.crypto-ticker-container {
-    background: #0b1120;
-    border-top: 1px solid rgba(255,255,255,0.05);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-    overflow: hidden;
-    white-space: nowrap;
-    padding: 15px 0;
-}
-
-.ticker-wrapper {
-    display: inline-block;
-    animation: ticker 15s linear infinite; /* Kayan yazı animasyonu */
-}
-
-.ticker-item {
-    display: inline-block;
-    color: #cbd5e1;
-    font-weight: 600;
-    margin-right: 50px;
-    font-size: 1.1rem;
-}
-
-.ticker-item i { margin-right: 8px; color: #f59e0b; }
-.ticker-item span.up { color: #22c55e; margin-left: 5px; font-size: 0.9rem; }
-.ticker-item span.down { color: #ef4444; margin-left: 5px; font-size: 0.9rem; }
-
-@keyframes ticker {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-}
-
 /* Proje Vitrini */
 .portfolio {
     padding: 80px 10%;
-    background: radial-gradient(circle at bottom left, #1e293b, #0f172a);
+    /* Sıcak siyah gradyan */
+    background: radial-gradient(circle at bottom left, #1c1c1c, #0a0a0a);
 }
 
 .project-grid {
@@ -276,7 +258,7 @@ footer {
 }
 
 .project-card {
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.02);
     border-radius: 20px;
     overflow: hidden;
     transition: 0.3s;
@@ -285,13 +267,13 @@ footer {
 
 .project-card:hover {
     transform: translateY(-5px);
-    border-color: #38bdf8;
-    background: rgba(255, 255, 255, 0.05);
+    border-color: #ff6b00; /* Hoverda turuncu */
+    background: rgba(255, 255, 255, 0.04);
 }
 
 .project-visual {
     height: 200px;
-    background: #1e293b;
+    background: #111;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -299,7 +281,7 @@ footer {
 
 .project-visual i {
     font-size: 4rem;
-    color: #38bdf8;
+    color: #ff6b00; /* İkon turuncu */
     opacity: 0.5;
 }
 
@@ -320,11 +302,34 @@ footer {
 }
 
 .tags span {
-    background: rgba(56, 189, 248, 0.1);
-    color: #38bdf8;
+    /* Turuncu etiketler */
+    background: rgba(255, 107, 0, 0.15);
+    color: #ff6b00;
     padding: 5px 12px;
     border-radius: 15px;
     font-size: 0.8rem;
     margin-right: 5px;
     font-weight: 600;
+}
+
+/* Footer */
+footer {
+    padding: 40px 10%;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #64748b;
+    background: #0a0a0a;
+}
+
+.socials a {
+    color: #64748b;
+    margin-left: 15px;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    color: #ff6b00; /* Hoverda turuncu */
 }
