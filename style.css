@@ -1,4 +1,4 @@
-/* --- OBSIDIAN & DIGITAL LAVENDER THEME --- */
+/* --- OBSIDIAN & DIGITAL LAVENDER THEME (DÜZELTİLMİŞ) --- */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
 
 :root {
@@ -94,21 +94,20 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* --- DÜZELTİLEN KISIM BURASI --- */
 h1 {
     font-size: 4.5rem;
     line-height: 1.1;
     margin-bottom: 20px;
     
-    /* Eskisi: #94A3B8 (Gri) -> Yenisi: #818CF8 (Parlak Lavanta) */
+    /* DÜZELTİLEN KISIM: Gri yerine Parlak Lavanta */
+    /* Beyazdan başlayıp parlağa gidiyor, kararmıyor */
     background: linear-gradient(180deg, #ffffff 30%, #818CF8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     
-    /* Yazı patlasın diye parlama efekti */
+    /* Yazı patlasın diye hafif gölge/parlama */
     filter: drop-shadow(0 0 25px rgba(129, 140, 248, 0.3));
 }
-/* -------------------------------- */
 
 .subtitle {
     color: var(--text-muted);
