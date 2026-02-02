@@ -94,18 +94,18 @@ body {
 }
 
 h1 {
-    font-size: 5rem;
-    line-height: 1.05;
+    font-size: 4.5rem;
+    line-height: 1.1;
     margin-bottom: 25px;
-    
-    /* ÖNEMLİ: Beyazdan Lavantaya Geçiş (Kararma Yok) */
-    background: linear-gradient(180deg, #FFFFFF 30%, #818CF8 100%);
+
+    /* DÜZELTME: Koyu renkleri kaldırdık. Artık Saf Beyaz -> Parlak Lavanta */
+    background: linear-gradient(180deg, #ffffff 20%, #818CF8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
-    /* Yazının okunması için arkaya parlama */
-    filter: drop-shadow(0 0 30px rgba(129, 140, 248, 0.2));
-    
+
+    /* Yazı arka planda kaybolmasın diye hafif parlama ekledik */
+    filter: drop-shadow(0 0 20px rgba(129, 140, 248, 0.25));
+
     font-weight: 800;
     letter-spacing: -2px;
 }
