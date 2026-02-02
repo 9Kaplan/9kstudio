@@ -1,4 +1,4 @@
-/* --- OBSIDIAN & DIGITAL LAVENDER THEME --- */
+/* --- OBSIDIAN & DIGITAL LAVENDER THEME (FINAL) --- */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
 
 :root {
@@ -33,39 +33,65 @@ body {
     min-height: 100vh;
 }
 
-/* Navigasyon */
+/* --- NAVİGASYON VE LOGO --- */
 .glass-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
+    padding: 15px 8%; /* Padding biraz dengelendi */
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    background: rgba(11, 14, 20, 0.8);
+    background: rgba(11, 14, 20, 0.85);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border);
 }
 
-.logo {
+/* Logo Kapsayıcısı */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+/* SVG Logo Resmi */
+.nav-logo {
+    width: 42px;
+    height: 42px;
+    filter: drop-shadow(0 0 15px var(--primary-glow)); /* Hafif neon parlama */
+    transition: transform 0.3s;
+}
+
+.logo-container:hover .nav-logo {
+    transform: rotate(10deg); /* Üzerine gelince hafif döner */
+}
+
+/* Logo Yanındaki Yazı */
+.logo-text {
     font-size: 1.5rem;
     font-weight: 700;
     background: linear-gradient(to right, #fff, var(--primary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
 }
 
 .nav-items a {
     text-decoration: none;
     color: var(--text-muted);
     margin-left: 30px;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     transition: 0.3s;
+    font-weight: 500;
 }
-.nav-items a:hover { color: var(--primary); }
+.nav-items a:hover { 
+    color: var(--primary); 
+    text-shadow: 0 0 10px var(--primary-glow);
+}
 
-/* Hero Alanı */
+/* --- HERO ALANI --- */
 .hero {
     min-height: 90vh;
     display: flex;
@@ -73,71 +99,99 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 100px 20px 0;
-    background: radial-gradient(circle at top, rgba(129, 140, 248, 0.15), transparent 60%);
+    padding: 120px 20px 0;
+    background: radial-gradient(circle at top, rgba(129, 140, 248, 0.12), transparent 60%);
 }
 
 .badge {
-    padding: 6px 16px;
-    background: rgba(129, 140, 248, 0.1);
+    padding: 8px 18px;
+    background: rgba(129, 140, 248, 0.08);
     border: 1px solid rgba(129, 140, 248, 0.2);
     border-radius: 30px;
     color: var(--primary);
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     font-weight: 600;
-    margin-bottom: 20px;
-    letter-spacing: 0.5px;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 h1 {
     font-size: 4.5rem;
     line-height: 1.1;
-    margin-bottom: 20px;
-    background: linear-gradient(180deg, #fff 0%, #94A3B8 100%);
+    margin-bottom: 25px;
+    background: linear-gradient(180deg, #fff 20%, #94A3B8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    letter-spacing: -2px;
 }
 
 .subtitle {
     color: var(--text-muted);
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin-bottom: 40px;
+    font-size: 1.25rem;
+    max-width: 650px;
+    margin-bottom: 45px;
     line-height: 1.6;
+}
+
+/* Keşfet Linki */
+.discover-btn {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.discover-btn:hover {
+    gap: 12px;
+    text-shadow: 0 0 15px var(--primary-glow);
 }
 
 /* --- APP GRID (ÖZELLİK DUVARI) --- */
 .features-section {
     padding: 80px 10%;
     border-top: 1px solid var(--border);
+    position: relative;
 }
 
 .section-header {
     text-align: center;
     margin-bottom: 60px;
 }
-.section-header h2 { font-size: 2.5rem; margin-bottom: 10px; }
-.section-header p { color: var(--text-muted); }
+.section-header h2 { 
+    font-size: 2.8rem; 
+    margin-bottom: 15px; 
+    font-weight: 700;
+}
+.section-header p { 
+    color: var(--text-muted); 
+    font-size: 1.1rem;
+}
 
 /* BENTO GRID YAPISI */
 .bento-grid {
     display: grid;
-    /* Kartların boyutunu otomatik ayarla, minimum 160px */
+    /* Kartların boyutunu otomatik ayarla, minimum 150px */
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 20px;
+    gap: 24px;
 }
 
 .tool-card {
     background: var(--bg-secondary);
     border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 25px 15px;
+    border-radius: 20px;
+    padding: 30px 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
     position: relative;
     overflow: hidden;
     cursor: default;
@@ -145,34 +199,46 @@ h1 {
 
 /* Hover Efektleri */
 .tool-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     border-color: var(--primary);
-    box-shadow: 0 10px 30px -10px var(--primary-glow);
+    background: rgba(21, 25, 33, 0.8);
+    box-shadow: 0 15px 35px -10px var(--primary-glow);
 }
 
 .tool-card i {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: var(--text-muted);
-    margin-bottom: 15px;
-    transition: 0.3s;
+    margin-bottom: 18px;
+    transition: 0.4s;
 }
 
 .tool-card:hover i {
     color: var(--primary);
-    transform: scale(1.1);
+    transform: scale(1.15) rotate(-5deg);
+    filter: drop-shadow(0 0 10px var(--primary-glow));
 }
 
 .tool-card h4 {
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--text-main);
+    letter-spacing: 0.3px;
 }
 
 /* Footer */
 footer {
-    padding: 60px 10%;
+    padding: 80px 10%;
     text-align: center;
     border-top: 1px solid var(--border);
     margin-top: 50px;
-    color: var(--text-muted);
+    background: linear-gradient(to top, var(--bg-secondary), transparent);
+}
+
+/* Mobil Düzenlemeler */
+@media (max-width: 768px) {
+    h1 { font-size: 3rem; }
+    .glass-nav { padding: 15px 5%; }
+    .logo-text { font-size: 1.2rem; }
+    .nav-items { display: none; } /* Mobilde menüyü sadeleştirdik */
+    .bento-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; } /* Mobilde 2'li sıra */
 }
